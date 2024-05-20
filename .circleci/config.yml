@@ -20,9 +20,9 @@ jobs:
       - run:
           name: Push Docker image to DockerHub
           command: |
-            docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
-            docker tag my-app $DOCKERHUB_USERNAME/my-app
-            docker push $DOCKERHUB_USERNAME/my-app
+            docker login -u charteredcertifications -p dckr_pat_RBlX9prKRjcuPlowNglRw8FezEQ
+            docker tag my-app charteredcertifications/my-app
+            docker push charteredcertifications/my-app
 
 workflows:
   version: 2
@@ -32,4 +32,3 @@ workflows:
           filters:
             branches:
               only: main
-
